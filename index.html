@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة معايير الاعتماد المؤسسي 2026-2027</title>
+    <!-- استيراد خط Tajawal العربي العصري -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- استيراد Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- استيراد أيقونات Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+        }
+        /* تخصيص شريط التمرير */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- الترويسة الرئيسية (Hero Header) -->
+    <header class="bg-gradient-to-bl from-slate-900 via-primary-900 to-primary-800 text-white shadow-xl relative overflow-hidden">
+        <!-- عناصر زخرفية في الخلفية -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-blue-400 blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 relative z-10">
+            <div class="flex flex-col items-center text-center">
+                <!-- شارة العام الأكاديمي -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-100 text-sm font-medium mb-4">
+                    <i data-lucide="award" class="w-4 h-4 text-amber-300"></i>
+                    <span>وحدة ضمان الجودة — العام الأكاديمي 2026 - 2027</span>
+                </div>
+
+                <!-- العنوان الرئيسي -->
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
+                    منظومة رفع ملفات معايير الاعتماد المؤسسي
+                </h1>
+                
+                <p class="max-w-2xl text-base sm:text-lg text-blue-100/90 mb-8 leading-relaxed">
+                    البوابة الموحدة لفرق معايير الجودة لرفع المستندات والأدلة والشواهد الخاصة بكل معيار، والوصول السريع إلى المستودع السحابي الرئيسي للمعهد.
+                </p>
+
+                <!-- الزر الكبير لوحدة التخزين الرئيسية -->
+                <a href="https://kfshiet-my.sharepoint.com/:f:/g/personal/standards_kfs-hiet_edu_eg/IgDiRwF9eTskTIGSzMHWW-yYAca1grFm38MTFHhYN5PEi84?e=MiAcpV" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="group relative inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 sm:px-10 sm:py-5 text-lg sm:text-xl font-bold text-primary-900 bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-400 rounded-2xl shadow-2xl hover:shadow-amber-400/30 hover:scale-[1.02] active:scale-[0.99] transition-all duration-200 border-2 border-amber-200">
+                    <div class="p-2 bg-primary-900/10 rounded-xl group-hover:bg-primary-900/20 transition-colors">
+                        <i data-lucide="hard-drive" class="w-7 h-7 text-primary-900"></i>
+                    </div>
+                    <span>الدخول إلى وحدة التخزين الرئيسية (OneDrive)</span>
+                    <i data-lucide="external-link" class="w-5 h-5 opacity-75 group-hover:translate-x-[-4px] transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- شريط البحث والتصفية السريع -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20 w-full">
+        <div class="bg-white rounded-2xl shadow-md border border-slate-200/80 p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="relative w-full sm:w-96">
+                <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute right-3.5 top-1/2 -translate-y-1/2"></i>
+                <input type="text" 
+                       id="searchInput" 
+                       placeholder="ابحث باسم المعيار أو منسق المعيار..." 
+                       class="w-full pr-11 pl-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-600 focus:bg-white transition-all">
+            </div>
+            <div class="flex items-center gap-4 text-sm text-slate-600 w-full sm:w-auto justify-between sm:justify-end">
+                <span class="flex items-center gap-1.5 font-medium bg-blue-50 text-primary-800 px-3.5 py-1.5 rounded-xl border border-blue-100">
+                    <i data-lucide="layers" class="w-4 h-4 text-primary-600"></i>
+                    إجمالي المعايير المدرجة: <strong id="standardsCount">11</strong> معيار
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي: شبكة مربعات المعايير -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full">
+        <div id="standardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- سيتم توليد المربعات ديناميكياً عبر JavaScript -->
+        </div>
+
+        <!-- رسالة في حال عدم وجود نتائج بحث -->
+        <div id="noResults" class="hidden text-center py-16 bg-white rounded-2xl border border-slate-200 mt-4">
+            <i data-lucide="search-x" class="w-12 h-12 text-slate-400 mx-auto mb-3"></i>
+            <h3 class="text-lg font-bold text-slate-700">لا توجد نتائج مطابقة لبحثك</h3>
+            <p class="text-slate-500 text-sm mt-1">يرجى المحاولة بكلمات مفتاحية أخرى مثل رقم المعيار أو اسم المنسق.</p>
+        </div>
+    </main>
+
+    <!-- نافذة منبثقة (Modal) لعرض أعضاء فريق المعيار -->
+    <div id="teamModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <!-- خلفية معتمة -->
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div class="relative transform overflow-hidden rounded-2xl bg-white text-right shadow-2xl transition-all sm:my-8 w-full max-w-2xl border border-slate-200">
+                <!-- رأس النافذة -->
+                <div class="bg-gradient-to-l from-primary-800 to-primary-900 px-6 py-5 text-white flex items-center justify-between">
+                    <div>
+                        <span id="modalBadge" class="inline-block px-2.5 py-0.5 rounded-md bg-white/15 text-blue-100 text-xs font-medium mb-1"></span>
+                        <h3 id="modalTitle" class="text-xl font-bold leading-6"></h3>
+                    </div>
+                    <button onclick="closeModal()" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <!-- جسم النافذة (جدول الأعضاء) -->
+                <div class="px-6 py-5 max-h-[65vh] overflow-y-auto">
+                    <div class="overflow-hidden rounded-xl border border-slate-200">
+                        <table class="min-w-full divide-y divide-slate-200 text-sm">
+                            <thead class="bg-slate-50">
+                                <tr>
+                                    <th scope="col" class="py-3 px-4 text-right font-bold text-slate-700 w-12">م.</th>
+                                    <th scope="col" class="py-3 px-4 text-right font-bold text-slate-700">الاسم</th>
+                                    <th scope="col" class="py-3 px-4 text-right font-bold text-slate-700">الصفة</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modalMembersList" class="divide-y divide-slate-200 bg-white">
+                                <!-- الصفوف تضاف هنا -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- تذييل النافذة -->
+                <div class="bg-slate-50 px-6 py-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div class="text-xs text-slate-500 text-center sm:text-right">
+                        <p>مدير وحدة ضمان الجودة: <strong class="text-slate-700">د. أحمد محمود عوض</strong></p>
+                        <p>عميد المعهد: <strong class="text-slate-700">أ.د. مصطفى كامل عبد الرحمن</strong></p>
+                    </div>
+                    <div class="flex items-center gap-2 w-full sm:w-auto">
+                        <a id="modalUploadBtn" href="#" target="_blank" rel="noopener noreferrer" 
+                           class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary-600 hover:bg-primary-700 text-white text-sm font-bold rounded-xl transition-colors shadow-sm">
+                            <i data-lucide="upload-cloud" class="w-4 h-4"></i>
+                            <span>رفع ملفات المعيار</span>
+                        </a>
+                        <button onclick="closeModal()" class="px-4 py-2.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-sm font-medium rounded-xl transition-colors">
+                            إغلاق
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تذييل الصفحة (Footer) -->
+    <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+                <div class="flex items-center gap-6">
+                    <div>
+                        <span class="text-slate-400">مدير وحدة ضمان الجودة:</span>
+                        <strong class="text-slate-800">د. أحمد محمود عوض</strong>
+                    </div>
+                    <span class="hidden sm:inline text-slate-300">|</span>
+                    <div>
+                        <span class="text-slate-400">عميد المعهد:</span>
+                        <strong class="text-slate-800">أ.د. مصطفى كامل عبد الرحمن</strong>
+                    </div>
+                </div>
+                <div class="text-slate-400 text-xs">
+                    تشكيل فرق معايير الاعتماد المؤسسي 2026 - 2027
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- البيانات والمنطق البرمجي -->
+    <script>
+        // مصفوفة بيانات المعايير كاملة كما وردت في المستند
+        const standardsData = [
+            {
+                number: "المعيار الأول",
+                title: "التخطيط الاستراتيجي",
+                url: "https://forms.cloud.microsoft/r/e0dRSCkXEH",
+                icon: "compass",
+                coordinator: "د/ أحمد محمود أحمد عوض",
+                members: [
+                    { name: "د/ أحمد محمود أحمد عوض", role: "منسق المعيار" },
+                    { name: "د/ زين العابدين فتحى إبراهيم", role: "عضو هيئة التدريس" },
+                    { name: "م.م. أماني ماهر مراد", role: "عضو الهيئة المعاونة" },
+                    { name: "م / أحمد محمود أحمد عثمان", role: "عضو الهيئة المعاونة" },
+                    { name: "أ/ سعيد محمد عبد الهادي الحمامى", role: "أمين المعهد" },
+                    { name: "أ/ أميرة جمال حسن بهنسى", role: "عضو الجهاز الاداري" },
+                    { name: "م/ أحمد ماهر مرسي محروس", role: "طالب (الفرقة الثانية)" },
+                    { name: "م/ عبدالله شعبان غازى", role: "من الخريجين" }
+                ]
+            },
+            {
+                number: "المعيار الثاني",
+                title: "القيادة والحوكمة",
+                url: "https://forms.cloud.microsoft/r/BgzWXAWzAF",
+                icon: "shield-check",
+                coordinator: "د/ هنادى عبد الرحمن الدهيمى",
+                members: [
+                    { name: "د/ هنادى عبد الرحمن الدهيمى", role: "منسق المعيار" },
+                    { name: "د/ مروه السيد أحمد مكى", role: "عضو هيئة التدريس" },
+                    { name: "م.م/ محمد فوزي عبد الشفوق", role: "عضو الهيئة المعاونة" },
+                    { name: "م/ عبد الحكيم توفيق", role: "عضو الهيئة المعاونة" },
+                    { name: "أ/ سعيد محمد عبد الهادي الحمامى", role: "أمين المعهد" },
+                    { name: "ا/ ولاء مسعد السيد", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ محمود حسن الحمامى", role: "عضو الجهاز الاداري" },
+                    { name: "م/ السيد أشرف السيد أيوب", role: "طالب (الفرقة الثالثة)" }
+                ]
+            },
+            {
+                number: "المعيار الثالث",
+                title: "إدارة الجودة والتطوير",
+                url: "https://forms.cloud.microsoft/r/KzxAdHNQ5S",
+                icon: "check-circle-2",
+                coordinator: "د/ اسماء فوزي محمود بركات",
+                members: [
+                    { name: "د/ اسماء فوزي محمود بركات", role: "منسق المعيار" },
+                    { name: "د/ شيماء ممدوح عامر", role: "عضو هيئة التدريس" },
+                    { name: "د / محمد فؤاد عبد السلام", role: "عضو هيئة التدريس" },
+                    { name: "د/ مني عبد الحميد حسن", role: "عضو هيئة التدريس" },
+                    { name: "م.م/ سارة أحمد خضر", role: "عضو الهيئة المعاونة" },
+                    { name: "م.م/ آلاء مصطفي محمد عثمان", role: "عضو الهيئة المعاونة" },
+                    { name: "أ/ ولاء مسعد السيد", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ آية محمد عبد الفتاح", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ السيد حسام الدين السيد متولي", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ أميره جمال حسن بهنسى", role: "عضو الجهاز الاداري" },
+                    { name: "ا/ ياسمين محمد عبدالعليم", role: "عضو الجهاز الاداري" },
+                    { name: "م/ روان حمدي مصير عبد الواحد", role: "طالب (الفرقة الثانية)" },
+                    { name: "م/ محمد محمد إبراهيم الجندي", role: "من خريجين المعهد" }
+                ]
+            },
+            {
+                number: "المعيار الرابع",
+                title: "أعضاء هيئة التدريس والهيئة المعاونة",
+                url: "https://forms.cloud.microsoft/r/WTytdwNyEg",
+                icon: "users",
+                coordinator: "د/ سعد أبو العلا سعد",
+                members: [
+                    { name: "د/ سعد أبو العلا سعد", role: "منسق المعيار" },
+                    { name: "د/ اسلام محمد علي عثمان", role: "عضو هيئة التدريس" },
+                    { name: "د/ أميرة الشراكي محمد", role: "عضو هيئة التدريس" },
+                    { name: "د/ محمد إبراهيم الصالحي", role: "عضو الهيئة المعاونة" },
+                    { name: "م.م/ دعاء سعيد عبد الحليم", role: "عضو الهيئة المعاونة" },
+                    { name: "م/ أحمد عمران هدايا", role: "عضو الهيئة المعاونة" },
+                    { name: "د/ رانيا عبد السميع يوسف", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ شريف زكريا عبد الحميد", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ أميرة جمال حسن بهنسى", role: "عضو الجهاز الاداري" },
+                    { name: "م/ حسام سعد عبدا لعفار عبد العزيز", role: "طالب (الفرقة الثالثة)" },
+                    { name: "م/ حسناء نصر أحمد علي", role: "من خريجين المعهد" }
+                ]
+            },
+            {
+                number: "المعيار الخامس",
+                title: "الجهاز الإداري",
+                url: "https://forms.cloud.microsoft/r/U8FWYHX1Lv",
+                icon: "briefcase",
+                coordinator: "ا.م.د/ تامر إبراهيم أحمد إبراهيم",
+                members: [
+                    { name: "ا.م.د/ تامر إبراهيم أحمد إبراهيم", role: "منسق المعيار" },
+                    { name: "د/ولاء متولي قنديل", role: "عضو هيئة التدريس" },
+                    { name: "م/ مروة بسيوني فتحي العسكري", role: "عضو الهيئة المعاونة" },
+                    { name: "م/ سهير صديق ليمونة", role: "عضو الهيئة المعاونة" },
+                    { name: "م/ السيد علي محمد الموزي", role: "عضو الهيئة المعاونة" },
+                    { name: "أ/ سعيد محمد عبد الهادي الحمامى", role: "أمين المعهد" },
+                    { name: "م. مني مجدي إبراهيم البنا", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ بسنت سعيد محمد النجار", role: "عضو الجهاز الاداري" },
+                    { name: "ا/ ياسمين محمد عبد العليم", role: "عضو الجهاز الاداري" },
+                    { name: "ا. محمد سعد فهمي جاويش", role: "عضو الجهاز الاداري" }
+                ]
+            },
+            {
+                number: "المعيار السادس",
+                title: "الموارد المالية والمادية",
+                url: "https://forms.cloud.microsoft/r/Z7QA9RMdRG",
+                icon: "building-2",
+                coordinator: "د/ فاطمة جلال حشاد",
+                members: [
+                    { name: "د/ فاطمة جلال حشاد", role: "منسق المعيار" },
+                    { name: "أ.م.د/ احمد يسرى بلتاجي عقل", role: "عضو هيئة التدريس" },
+                    { name: "أ.م.د/ وليد صلاح الدين", role: "عضو هيئة التدريس" },
+                    { name: "د/ أية الله أحمد خليل", role: "عضو هيئة التدريس" },
+                    { name: "م.م/ أحمد تاج البريدي", role: "عضو الهيئة المعاونة" },
+                    { name: "أ/أحمد عبد الله عتمان", role: "عضو الجهاز الاداري" },
+                    { name: "أ/محمد صلاح الدين الزواوي", role: "عضو الجهاز الاداري" },
+                    { name: "ا/ ياسمين محمد عبد العليم", role: "عضو الجهاز الاداري" },
+                    { name: "م/ خالد واصف هليل علي", role: "طالب (الفرقة الثالثة)" }
+                ]
+            },
+            {
+                number: "المعيار السابع",
+                title: "المعايير الأكاديمية والبرامج التعليمية",
+                url: "https://forms.cloud.microsoft/r/wzBDy9LhEH",
+                icon: "book-open",
+                coordinator: "د/ إبراهيم جمال الدين زويل",
+                members: [
+                    { name: "د/ إبراهيم جمال الدين زويل", role: "منسق المعيار" },
+                    { name: "د/ محمد السيد حماده نوار", role: "عضو هيئة التدريس" },
+                    { name: "د/ سمر منصور محمود زايد", role: "عضو هيئة التدريس" },
+                    { name: "د/ ألاء توفيق رمضان راجح", role: "عضو الهيئة المعاونة" },
+                    { name: "م.م/ نورهان دياب صحصاح", role: "عضو الهيئة المعاونة" },
+                    { name: "م. نهاد محمد بدران", role: "عضو الهيئة المعاونة" },
+                    { name: "م/ عبد الحكيم توفيق", role: "عضو الهيئة المعاونة" },
+                    { name: "أ/ آية محمد عبد الفتاح", role: "عضو الجهاز الاداري" },
+                    { name: "م/ علي أحمد علي دحدوح", role: "طالب (الفرقة الثالثة)" }
+                ]
+            },
+            {
+                number: "المعيار الثامن",
+                title: "التدريس والتعلم",
+                url: "https://forms.cloud.microsoft/r/9FeX7Q64DW",
+                icon: "presentation",
+                coordinator: "د/ فاطمة الزهراء حسين الجندي",
+                members: [
+                    { name: "د/ فاطمة الزهراء حسين الجندي", role: "منسق المعيار" },
+                    { name: "د/ سمر خيري عبد المقصود", role: "عضو هيئة التدريس" },
+                    { name: "د/ مؤمنة حسن على محمد", role: "عضو هيئة التدريس" },
+                    { name: "م.م/ أنغام عبد الوهاب مدبولي", role: "عضو الهيئة المعاونة" },
+                    { name: "م.م/ سناء سعيد سلامه", role: "عضو الهيئة المعاونة" },
+                    { name: "د/ حسام الدين عبد الحميد", role: "عضو الجهاز الاداري" },
+                    { name: "أ/آية محمد عبد الفتاح", role: "عضو الجهاز الاداري" },
+                    { name: "م/ سما محمد عبد الواحد إبراهيم", role: "من خريجين المعهد" },
+                    { name: "م/ دينا هشام رستم عبد المجيد", role: "طالب (الفرقة الرابعة)" },
+                    { name: "م/ عمرو نبيل بدير سليم", role: "طالب (الفرقة الثانية)" },
+                    { name: "م/ ندي عصام سعد النزهي", role: "طالب (الفرقة الثالثة)" }
+                ]
+            },
+            {
+                number: "المعيار التاسع",
+                title: "الطلاب والخريجون",
+                url: "https://forms.cloud.microsoft/r/90D4VMqLFZ",
+                icon: "graduation-cap",
+                coordinator: "د/ رامى إبراهيم شاهين",
+                members: [
+                    { name: "د/ رامى إبراهيم شاهين", role: "منسق المعيار" },
+                    { name: "د/ رباب إبراهيم كمال النوساني", role: "عضو هيئة التدريس" },
+                    { name: "د/ أمل محمد فوزي", role: "عضو هيئة التدريس" },
+                    { name: "م.م/ منى السعيد الدسوقي", role: "عضو الهيئة المعاونة" },
+                    { name: "م.م/ أسماء فريج خليل", role: "عضو الهيئة المعاونة" },
+                    { name: "م/ أميرة أكرم أحمد طلبة", role: "عضو الهيئة المعاونة" },
+                    { name: "أ/ عاصم حسام الدين متولي", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ آيات فهمي غازي", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ السيد حسام الدين متولي", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ مي عبد الفتاح الشربجي", role: "عضو الجهاز الاداري" },
+                    { name: "م/ إسلام رجب رجب عوض", role: "طالب (الفرقة الثانية)" },
+                    { name: "م/ رنا محمد الأباصيري عبدالغني", role: "طالب (الفرقة الثالثة)" },
+                    { name: "م/ نادر أحمد رشدي فشار", role: "طالب (الفرقة الثانية)" }
+                ]
+            },
+            {
+                number: "المعيار العاشر",
+                title: "البحث العلمي والأنشطة العلمية",
+                url: "https://forms.cloud.microsoft/r/z4FvMHWJFA",
+                icon: "microscope",
+                coordinator: "د/ إسراء ابو العزم شبل",
+                members: [
+                    { name: "د/ إسراء ابو العزم شبل", role: "منسق المعيار" },
+                    { name: "د/ هند رمضان عدلان سليمه", role: "عضو هيئة التدريس" },
+                    { name: "م.م/ ولاء أحمد حنفي زقدان", role: "عضو الهيئة المعاونة" },
+                    { name: "م.م/أماني عادل السيد سيد", role: "عضو الهيئة المعاونة" },
+                    { name: "م.م/ محمد أحمد عبد الغنى صلاح", role: "عضو الهيئة المعاونة" },
+                    { name: "م/ حسن السيد محمود عباس", role: "عضو الهيئة المعاونة" },
+                    { name: "أ/ السيد حسام الدين السيد متولي", role: "عضو الجهاز الاداري" }
+                ]
+            },
+            {
+                number: "المعيار الثاني عشر",
+                title: "المشاركة المجتمعية وتنمية البيئة",
+                url: "https://forms.cloud.microsoft/r/C675znTcdg",
+                icon: "globe-2",
+                coordinator: "د/ داليا على عوض الترامسي",
+                members: [
+                    { name: "د/ داليا على عوض الترامسي", role: "منسق المعيار" },
+                    { name: "د/ رشا محمد أحمد ضبعون", role: "عضو هيئة التدريس" },
+                    { name: "م/ احمد عبد الرحمن شعيشع", role: "عضو الهيئة المعاونة" },
+                    { name: "أ/ ولاء مسعد السيد", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ أحمد محمد عيسى", role: "عضو الجهاز الاداري" },
+                    { name: "أ/ خالد محمد اللفاف", role: "عضو الجهاز الاداري" },
+                    { name: "م/ فاطمة عادل أحمد العاصي", role: "طالب (الفرقة الرابعة)" },
+                    { name: "د/ مازن فوزي بدوي", role: "من الأطراف المجتمعية" },
+                    { name: "م/ ماجد عبد الفتاح", role: "من الأطراف المجتمعية" },
+                    { name: "د/ على بدوي", role: "من الأطراف المجتمعية" }
+                ]
+            }
+        ];
+
+        const gridContainer = document.getElementById('standardsGrid');
+        const searchInput = document.getElementById('searchInput');
+        const noResults = document.getElementById('noResults');
+        const standardsCount = document.getElementById('standardsCount');
+
+        // دالة عرض بطاقات المعايير
+        function renderCards(data) {
+            gridContainer.innerHTML = '';
+            standardsCount.textContent = data.length;
+
+            if (data.length === 0) {
+                noResults.classList.remove('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            data.forEach((item, index) => {
+                // العثور على الفهرس الأصلي لفتح النافذة الصحيحة
+                const originalIndex = standardsData.findIndex(s => s.number === item.number);
+                
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl border border-slate-200/90 shadow-sm card-hover flex flex-col justify-between overflow-hidden";
+                
+                card.innerHTML = `
+                    <div class="p-6">
+                        <!-- أعلى البطاقة: شارة رقم المعيار والأيقونة -->
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-bold bg-primary-50 text-primary-700 border border-primary-100">
+                                ${item.number}
+                            </span>
+                            <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-primary-600">
+                                <i data-lucide="${item.icon}" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+
+                        <!-- عنوان المعيار -->
+                        <h2 class="text-xl font-extrabold text-slate-800 mb-3 leading-snug">
+                            ${item.title}
+                        </h2>
+
+                        <!-- معلومات منسق المعيار -->
+                        <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 flex items-start gap-2.5">
+                            <i data-lucide="user-check" class="w-4 h-4 text-emerald-600 mt-1 shrink-0"></i>
+                            <div class="text-sm">
+                                <span class="text-slate-500 block text-xs">منسق المعيار:</span>
+                                <span class="font-bold text-slate-800">${item.coordinator}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- أزرار الإجراءات أسفل البطاقة -->
+                    <div class="px-6 pb-6 pt-2 flex flex-col gap-2.5">
+                        <!-- زر رفع الملفات الرئيسي -->
+                        <a href="${item.url}" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-primary-600 hover:bg-primary-700 active:bg-primary-800 text-white font-bold text-sm rounded-xl shadow-sm hover:shadow transition-all">
+                            <i data-lucide="cloud-upload" class="w-4 h-4"></i>
+                            <span>رفع ملفات ${item.number}</span>
+                            <i data-lucide="arrow-up-left" class="w-4 h-4 opacity-80"></i>
+                        </a>
+
+                        <!-- زر عرض تشكيل الفريق -->
+                        <button onclick="openModal(${originalIndex})" 
+                                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-medium text-xs rounded-xl transition-colors">
+                            <i data-lucide="users" class="w-4 h-4 text-slate-500"></i>
+                            <span>عرض تشكيل فريق المعيار (${item.members.length} أعضاء)</span>
+                        </button>
+                    </div>
+                `;
+                gridContainer.appendChild(card);
+            });
+
+            // تفعيل أيقونات Lucide للعناصر المضافة حديثاً
+            lucide.createIcons();
+        }
+
+        // البحث الفوري
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.trim().toLowerCase();
+            const filtered = standardsData.filter(item => 
+                item.number.toLowerCase().includes(term) ||
+                item.title.toLowerCase().includes(term) ||
+                item.coordinator.toLowerCase().includes(term) ||
+                item.members.some(m => m.name.toLowerCase().includes(term))
+            );
+            renderCards(filtered);
+        });
+
+        // فتح نافذة أعضاء الفريق
+        function openModal(index) {
+            const item = standardsData[index];
+            document.getElementById('modalBadge').textContent = item.number;
+            document.getElementById('modalTitle').textContent = item.title;
+            document.getElementById('modalUploadBtn').href = item.url;
+
+            const tbody = document.getElementById('modalMembersList');
+            tbody.innerHTML = '';
+
+            item.members.forEach((member, idx) => {
+                const isCoordinator = member.role.includes('منسق');
+                const tr = document.createElement('tr');
+                tr.className = isCoordinator ? 'bg-blue-50/60' : 'hover:bg-slate-50';
+                
+                tr.innerHTML = `
+                    <td class="py-3 px-4 text-slate-500 font-medium">${idx + 1}</td>
+                    <td class="py-3 px-4 font-bold text-slate-800">${member.name}</td>
+                    <td class="py-3 px-4">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium ${
+                            isCoordinator 
+                            ? 'bg-primary-100 text-primary-800 border border-primary-200' 
+                            : 'bg-slate-100 text-slate-700'
+                        }">
+                            ${member.role}
+                        </span>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('teamModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        }
+
+        // إغلاق النافذة
+        function closeModal() {
+            document.getElementById('teamModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // إغلاق النافذة بزر Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // التشغيل الأولي عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCards(standardsData);
+        });
+    </script>
+</body>
+</html>
